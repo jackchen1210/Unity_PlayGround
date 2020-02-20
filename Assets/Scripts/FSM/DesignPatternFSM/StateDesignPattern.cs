@@ -5,6 +5,4 @@ public class StateDesignPattern : StateMachine
     private void Start() {
         SetState(new Start(this));
     }
-
-    
 }

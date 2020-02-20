@@ -6,7 +6,6 @@ public class SimpleFSM : MonoBehaviour
 {
     [SerializeField]private State state=new State();
     private enum State{
-
         START,
         RUNNING,
         PAUSE,
@@ -25,7 +24,6 @@ public class SimpleFSM : MonoBehaviour
         }else{
             StartCoroutine(GameStart());
         }
-        
     }
     private IEnumerator GameRunning(){
         Debug.Log("GameRunning");

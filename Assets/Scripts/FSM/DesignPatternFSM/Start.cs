@@ -11,6 +11,4 @@ public class Start :State
         yield return null;
         battleBehaviour.SetState(new Running(battleBehaviour));
     }
-
-
 }

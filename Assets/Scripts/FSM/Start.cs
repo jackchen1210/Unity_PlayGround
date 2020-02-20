@@ -10,4 +10,6 @@ public class Start :State
         Debug.Log(battleBehaviour.BattleLog);
         yield break;
     }
+
+    
 }

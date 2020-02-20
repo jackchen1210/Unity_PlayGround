@@ -2,14 +2,15 @@ using System.Collections;
 using UnityEngine;
 public class Start :State 
 {   
-    public Start(BattleBehaviour battleBehaviour):base(battleBehaviour){
+    public Start(StateDesignPattern battleBehaviour):base(battleBehaviour){
 
     }
 
-    public override IEnumerator StartBattle(){
-        Debug.Log(battleBehaviour.BattleLog);
-        yield break;
+    public override IEnumerator StartState(){
+        Debug.Log("Start");
+        yield return null;
+        battleBehaviour.SetState(new Running(battleBehaviour));
     }
 
-    
+
 }

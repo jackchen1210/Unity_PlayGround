@@ -7,10 +7,10 @@ public class SimpleFSM : MonoBehaviour
     [SerializeField]private State state=new State();
     private enum State{
 
-        start,
-        running,
-        pause,
-        end,
+        START,
+        RUNNING,
+        PAUSE,
+        END,
     }
 
     private void Start() {
@@ -20,7 +20,7 @@ public class SimpleFSM : MonoBehaviour
     private IEnumerator GameStart(){
         Debug.Log("GameStart");
         yield return new WaitForSeconds(1);
-        if(state==State.running){
+        if(state==State.RUNNING){
             StartCoroutine(GameRunning());
         }else{
             StartCoroutine(GameStart());
